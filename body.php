@@ -24,7 +24,7 @@ function readtext($me,$level) {
             }
             elseif ($source != '') {
                 //~ readfile('http://data.magiokis.nl/'.$source);
-                $lines = file('F:/magiokis/data/'. $source);
+                $lines = file('/home/albert/magiokis/data/'. $source);
                 foreach ($lines as $line) {
                     $line = str_replace('%cgipad',$_cgipad,$line);
                     $line = str_replace('%cgiprog',$_cgiprog,$line);
@@ -152,7 +152,7 @@ else {
     if (! $found) {
         if ($_section == "Vertel") {
             $found = false;
-            $xml = simplexml_load_file("F:\magiokis\data\vertel\vertellers.xml");
+            $xml = simplexml_load_file("/home/albert/magiokis/data/vertel/vertellers.xml");
             if ($xml->user['naam'] == 'papa') {
                 foreach($xml->user->categorie as $cat) {
                     $n = strval($cat['naam']);
@@ -169,7 +169,7 @@ else {
                 else
                      echo "<br />";
                 echo '<div style="padding-left: 20%">';
-                $xml = simplexml_load_file("F:\magiokis\data\vertel\verteller_papa.xml");
+                $xml = simplexml_load_file("/home/albert/magiokis/data/vertel/verteller_papa.xml");
                 $pad = strval($xml-> path);
                 foreach($xml->verhaal as $item) {
                     if ($item["categorie"] == $i) {
@@ -211,7 +211,7 @@ else {
         elseif ($_section == "Dicht") {
             //~ if (!in_array($_subsect,array("Start","Cover","Inhoud"))) {
                 $found = false;
-                $xml = simplexml_load_file("F:\magiokis\data\dicht\Dicht_Trefwoorden.xml");
+                $xml = simplexml_load_file("/home/albert/magiokis/data/dicht/Dicht_Trefwoorden.xml");
                 foreach ($xml->jaren->jaar as $jaar) {
                     if ($jaar["id"] == $_subsect) {
                         $found = true;
@@ -219,7 +219,7 @@ else {
                     }
                 }
                 if ($found)
-                    make_tekst_page("F:\magiokis\data\dicht\Dicht_".$_subsect.".xml");
+                    make_tekst_page("/home/albert/magiokis/data/dicht/Dicht_".$_subsect.".xml");
                 else
                     echo "<div>subsection '.$_subsect.' niet bekend bij section 'Dicht'</div>";
             //~ }

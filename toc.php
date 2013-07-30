@@ -74,7 +74,7 @@ function readelem($me,$level) {
                 }
             }
             elseif ($_section == "Vertel") {
-                $xml = simplexml_load_file("F:\magiokis\data\vertel\vertellers.xml");
+                $xml = simplexml_load_file("/home/albert/magiokis/data/vertel/vertellers.xml");
                 if ($xml->user['naam'] == 'papa') {
                     foreach($xml->user->categorie as $cat) {
                         $t = strval($cat);
@@ -97,7 +97,7 @@ function readelem($me,$level) {
                 }
             }
             elseif ($_section == "Dicht") {
-                $xml = simplexml_load_file("F:\magiokis\data\dicht\Dicht_Trefwoorden.xml");
+                $xml = simplexml_load_file("/home/albert/magiokis/data/dicht/Dicht_Trefwoorden.xml");
                 foreach ($xml->jaren->jaar as $jaar) {
                     if ($jaar["id"] == $_subsect)
                         $t = '<span class="backnb">'.$jaar["id"].'</span>';

@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="<?php
-?>Magiokis.css" type="text/css" /><?php
+?>magiokis.css" type="text/css" /><?php
 if (in_array($_section,array('OW','SpeelMee',"Speel","Zing")))
-    $css = 'Songtekst_html.css';
+    $css = 'songtekst_html.css';
 elseif ($_section == 'Dicht')
-    $css = 'Dicht_html.css';
+    $css = 'dicht_html.css';
 elseif ($_section == 'Vertel')
-    $css = 'Vertel_html.css';
+    $css = 'vertel_html.css';
 elseif ($_section == 'Act')
     $css = 'toneelstuk_html.css';
 else

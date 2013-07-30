@@ -27,7 +27,7 @@ $sections = array(
     array('Denk','Start',76),
     array('Bio','Start',76)
     );
-echo '<img src="http://www.magiokis.nl/images/TopBar_' .  $_section . '.gif" border="0" width="750" height="40" usemap="#GetAround"  alt="Topbar" />';
+echo '<img src="http://local.magiokis.nl/images/TopBar_' .  $_section . '.gif" border="0" width="750" height="40" usemap="#GetAround"  alt="Topbar" />';
 echo '<map name="GetAround" id="GetAround">';
 $c0 = 0;
 foreach ($sections as $thissect)

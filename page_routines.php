@@ -3,12 +3,12 @@ function denkbank($trefwoord,$tekstnr) {
     global $_htmlpad,$_xmlpad,$_datapad;
     // via http werkt het ineens niet hier, daarom een beetje anders
     //~ $xmlpad = $_xmlpad.'denk/';
-    $xmlpad = 'F:\\magiokis\\data\\denk\\';
+    $xmlpad = '/home/albert/magiokis/data/denk/';
     $fn = $xmlpad.'trefwoorden.xml';
     $xmlt = simplexml_load_file($fn);
     $fn = $xmlpad.'denkerij.xml';
     $xmld = simplexml_load_file($fn);
-    $rlines = file('F:\\magiokis\\data\\content\\denk\\Select.html');
+    $rlines = file('/home/albert/magiokis/data/content/Denk/Select.html');
     $tel = 1;
     foreach ($rlines as $line) {
         if (trim($line) == '<trefwoordenlijst>') { //  selector voor trefwoorden opbouwen
