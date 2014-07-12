@@ -111,7 +111,7 @@ function make_xspf_objects($fl) { // wat is het verschil met de volgende?
 function make_xspf_opn_page($it) { // xspf player speelt de song af terwijl de tekst getoond wordt
 // argument kan opname-id zijn maar ook filenaam - afhandelen binnen Opname functie
     global $_httproot,$_datapad,$_tekstpad,$_cgipad,$_cgiprog,$_section,$_subsect;
-    $x = Opname($it);
+    $x = Opname(strtoupper($it));
     foreach ($x as $do) {
         $titel = '(untitled)';
         $y = Song($do['song']); // "SongID" (3)
