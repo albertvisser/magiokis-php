@@ -3,7 +3,7 @@
 <head>
 <?php include('start.php') ?>
 <title><?php echo $_section ?>_<?php echo $_subsect ?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
 include('stylesheet.php');
 include('denkbank_js.php');
